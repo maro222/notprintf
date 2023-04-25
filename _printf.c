@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 		if (get_modifier(ptr, &params))
 			ptr++;
 		if (!get_specifier(ptr))
-			sum += get_from_to(begin, ptr,
+			sum += print_from_to(begin, ptr,
 				params.l_modifier || params.h_modifier ? ptr - 1 : 0);
 		else
 			sum += get_print_func(ptr, ap, &params);

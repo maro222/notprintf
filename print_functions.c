@@ -11,7 +11,7 @@ int print_char(va_list ap, params_t *params)
 	unsigned int d = 1, sum = 0, c = va_arg(ap, int);
 
 	if (params->minus_flag)
-		sum += _putchar(S);
+		sum += _putchar(c);
 	while (d++ < params->width)
 		sum += _putchar(p);
 	if (!params->minus_flag)
@@ -24,7 +24,7 @@ int print_char(va_list ap, params_t *params)
  * @params: parametars
  * Return: integer print
  */
-int print_int(va_list ap, params_t params)
+int print_int(va_list ap, params_t *params)
 {
 	long i;
 
@@ -42,7 +42,7 @@ int print_int(va_list ap, params_t params)
  * @params: struct parametars
  * Return: string
  */
-int print_string(va_list ap, params_t params)
+int print_string(va_list ap, params_t *params)
 {
 char *s = va_arg(ap, char *), p = ' ';
 unsigned int d = 0, sum = 0, i = 0, j;
@@ -51,7 +51,7 @@ switch ((int)(!s))
 case 1:
 s = NULL_STRING;
 
-j = d = _strlen(str);
+j = d = _strlen(s);
 if (params->precision < d)
 j = d = params->precision;
 
@@ -93,7 +93,7 @@ return (_putchar('%'));
  *@params: parametars
  *Return: sum
  */
-print_S(va_list ap, params_t params)
+print_S(va_list ap, params_t *params)
 {
 	char *s = va_arg(ap, char *);
 	char *hex;

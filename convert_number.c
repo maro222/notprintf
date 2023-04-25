@@ -62,13 +62,13 @@ return (c += print_number(s, params));
 */
 int print_binary(va_list ap, params_t *params)
 {
-unsigned int m = va_arg(ap, unsigned int);
+unsigned int n = va_arg(ap, unsigned int);
 char *s = convert(n, 2, CONVERT_UNSIGNED, params);
 int c = 0;
 if (params->hashtag_flag && n)
 *--s = '0';
 params->unsign = 1;
-return (c += print_number(str, params));
+return (c += print_number(s, params));
 }
 /**
  * print_octal -func print binary_numbers
@@ -79,7 +79,6 @@ return (c += print_number(str, params));
 int print_octal(va_list ap, params_t *params)
 {
 unsigned long i;
-unsigned int m = va_arg(ap, unsigned int);
 char *s;
 int c = 0;
 if (params->l_modifier)
@@ -95,5 +94,5 @@ if (params->hashtag_flag && i)
 *--s = '0';
 params->unsign = 1;
 
-return (c += print_number(str, params));
+return (c += print_number(s, params));
 }

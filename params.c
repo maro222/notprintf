@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /**
  *init_params - gives struct params initial value
  *@params: struct parametars
