@@ -68,7 +68,7 @@ int c = 0;
 if (params->hashtag_flag && n)
 *--s = '0';
 params->unsign = 1;
-return (c += print_number(str, params));
+return (c += print_number(s, params));
 }
 /**
  * print_octal -func print binary_numbers

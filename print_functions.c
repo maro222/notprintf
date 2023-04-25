@@ -11,7 +11,7 @@ int print_char(va_list ap, params_t *params)
 	unsigned int d = 1, sum = 0, c = va_arg(ap, int);
 
 	if (params->minus_flag)
-		sum += _putchar(S);
+		sum += _putchar(s);
 	while (d++ < params->width)
 		sum += _putchar(p);
 	if (!params->minus_flag)
@@ -35,6 +35,7 @@ int print_int(va_list ap, params_t params)
 	else
 		i = (int)va_arg(ap, int);
 	return (print_number(convert(i, 10, 0, params), params));
+
 }
 /**
  * print_string - string print
@@ -51,23 +52,23 @@ switch ((int)(!s))
 case 1:
 s = NULL_STRING;
 
-j = d = _strlen(str);
-if (params->precision < d)
-j = d = params->precision;
+j = d = _strlen(s);
+if (params.precision < d)
+j = d = params.precision;
 
-if (params->minus_flag)
+if (params.minus_flag)
 {
-	if (params->precision != UINT_MAX)
+	if (params.precision != UINT_MAX)
 		for (i = 0; i < d; i++)
 			sum += _putchar(*s++);
 	else
 		sum += _puts(s);
 }
-while (j++ < params->width)
+while (j++ < params.width)
 	sum += _putchar(p);
-if (!params->minus_flag)
+if (!params.minus_flag)
 {
-	if (params->precision != UINT_MAX)
+	if (params.precision != UINT_MAX)
 		for (i = 0; i < d; i++)
 			sum += _putchar(*s++);
 	else
@@ -93,7 +94,7 @@ return (_putchar('%'));
  *@params: parametars
  *Return: sum
  */
-print_S(va_list ap, params_t params)
+print_s(va_list ap, params_t params)
 {
 	char *s = va_arg(ap, char *);
 	char *hex;
