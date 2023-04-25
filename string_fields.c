@@ -3,7 +3,7 @@
 /**
  * get_precision - specifies the precision of format
  *
- * @p: format string 
+ * @p: format string
  * @params: the parameters of struct
  * @ap: the list of parameters
  *
@@ -13,7 +13,7 @@
 char *get_precision(char *p, params_t *params, va_list ap)
 {
 	int d = 0;
-	
+
 	if (*p != '.')
 		return (p);
 	p++;

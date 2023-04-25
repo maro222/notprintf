@@ -12,13 +12,13 @@
 
 #define NULL_STRING "(null)"
 
-#define PARAMS_INIT {0,0,0,0,0,0,0,0,0,0}
+#define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
 #define CONVERT_LOWERCASE 1
 #define CONVERT_UNSIGNED 2
 
 /**
- * struct_parameters - parameters struct
+ * struct parameters - parameters struct
  *
  * @unsign: flag if unsigned value
  *
@@ -53,10 +53,10 @@ typedef struct parameters
 } params_t;
 
 /**
- *struct_specifier - struct token
+ * struct specifier - struct token
  *
  * @specifier: specifier token
- * @f: the function format 
+ * @f: the function format
  */
 
 typedef struct specifier
@@ -67,7 +67,7 @@ typedef struct specifier
 
 /* _puts.c module */
 int _puts(char *str);
-int _putchar(int c); //char c
+int _putchar(int c);
 
 
 /* print_functions module */
@@ -84,7 +84,7 @@ int print_address(va_list ap, params_t *params);
 
 /* specifier module */
 int (*get_specifier(char *s))(va_list ap, params_t *params);
-int get_print_func(char *s, va_list ap, params_t * params);
+int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
 char *get_width(char *s, params_t *params, va_list ap);
