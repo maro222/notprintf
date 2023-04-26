@@ -87,7 +87,7 @@ return (_putchar('%'));
  *@params: parametars
  *Return: sum
  */
-print_s(va_list ap, params_t *params)
+int print_S(va_list ap, params_t *params)
 {
 	char *s = va_arg(ap, char *);
 	char *hex;
