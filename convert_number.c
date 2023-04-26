@@ -33,7 +33,7 @@ return (c += print_number(s, params));
  * @params:parametars
  * Return: HEX num
 */
-int print_HEX(va_list ap, params_t *params)
+int print_Hex(va_list ap, params_t *params)
 {
 unsigned long l;
 int c = 0;
