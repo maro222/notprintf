@@ -35,6 +35,7 @@ int print_int(va_list ap, params_t *params)
 	else
 		i = (int)va_arg(ap, int);
 	return (print_number(convert(i, 10, 0, params), params));
+
 }
 /**
  * print_string - string print
@@ -52,6 +53,7 @@ case 1:
 s = NULL_STRING;
 
 j = d = _strlen(s);
+
 if (params->precision < d)
 j = d = params->precision;
 
@@ -63,16 +65,8 @@ if (params->minus_flag)
 	else
 		sum += _puts(s);
 }
-while (j++ < params->width)
+while (j++ < params.width)
 	sum += _putchar(p);
-if (!params->minus_flag)
-{
-	if (params->precision != UINT_MAX)
-		for (i = 0; i < d; i++)
-			sum += _putchar(*s++);
-	else
-		sum += _puts(s);
-}
 return (sum);
 }
 /**
