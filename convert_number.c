@@ -28,9 +28,9 @@ return (c += print_number(s, params));
 
 }
 /**
- * print_HEX -func print HEX_numbers
- * @ap:pars list
- * @params:parametars
+ * print_HEX - func print HEX_numbers
+ * @ap: pars list
+ * @params: parametars
  * Return: HEX num
 */
 int print_HEX(va_list ap, params_t *params)
@@ -56,8 +56,8 @@ return (c += print_number(s, params));
 }
 /**
  * print_binary - func print binary_numbers
- * @ap:pars list
- * @params:parametars
+ * @ap: pars list
+ * @params: parametars
  * Return: binary num
 */
 int print_binary(va_list ap, params_t *params)
