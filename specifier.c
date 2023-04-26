@@ -98,7 +98,7 @@ switch (*s)
 	params->l_modifier = 1;
 	return (1);
 }
-return (i);
+return (0);
 }
 /*
  *get_width - get string width
