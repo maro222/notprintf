@@ -87,12 +87,10 @@ return (i);
  */
 int get_modifier(char *s, params_t *params)
 {
-
+int i = 0;
 
 switch (*s)
 {
-	int i = 0;
-
 	case 'h':
 	params->h_modifier = 1;
 	break;
