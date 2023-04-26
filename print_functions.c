@@ -65,7 +65,7 @@ if (params->minus_flag)
 	else
 		sum += _puts(s);
 }
-while (j++ < params.width)
+while (j++ < params->width)
 	sum += _putchar(p);
 return (sum);
 }
@@ -87,7 +87,7 @@ return (_putchar('%'));
  *@params: parametars
  *Return: sum
  */
-print_S(va_list ap, params_t *params)
+print_s(va_list ap, params_t *params)
 {
 	char *s = va_arg(ap, char *);
 	char *hex;
