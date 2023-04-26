@@ -25,9 +25,9 @@ specifier_t specifiers[] = {
 };
 int i = 0;
 
-while (specifiers[i].specifier[0])
+while (specifiers[i].specifier != NULL)
 {
-if (*s == specifiers[i].specifier[0])
+if (*s == *(specifiers[i].specifier))
 {
 	return (specifiers[i].f);
 }
@@ -59,8 +59,7 @@ return (0);
  */
 int get_flag(char *s, params_t *params)
 {
-int i = 0;
-
+int i;
 switch (*s)
 {
 	case '+':
@@ -88,16 +87,16 @@ return (i);
  */
 int get_modifier(char *s, params_t *params)
 {
-int i = 0;
+
 
 switch (*s)
 {
 	case 'h':
-	i = params->h_modifier = 1;
-	break;
+	params->h_modifier = 1;
+	return(1);
 	case 'l':
-	i = params->l_modifier = 1;
-	break;
+	params->l_modifier = 1;
+	return (1);
 }
 return (i);
 }
